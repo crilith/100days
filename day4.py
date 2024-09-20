@@ -33,7 +33,10 @@ player_choice = int(input("Choose your option: Type 0 for Rock, 1 for Paper, 2 f
 
 print(options[player_choice])
 print(options[bot_pick])
-if player_choice == bot_pick:
+
+if player_choice > 2 or player_choice < 0:
+    print("Invalid choice. You lose!")
+elif player_choice == bot_pick:
     print("It's a tie!")
 elif bot_pick > player_choice and not (player_choice == 0 and bot_pick == 2):
     print("Bot Wins!")
